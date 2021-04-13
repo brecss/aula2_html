@@ -9,7 +9,7 @@
       integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A=="
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title style="color: rgb(42, 101, 189);">Document</title>
   </head>
   <body>
     <div style="width: 50%; height: 100px">
@@ -25,11 +25,11 @@
   var config = {
     type: "line", // Aqui falo qual modelo de grafico vou querer
     data: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"], // Aqui são as legendas do grafico
+      labels: ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN"], // Aqui são as legendas do grafico
       datasets: [
         {
-          label: "LINHA", // Titulo do grafico
-          data: [5, 25, 10, 5, 50, 150], // Dados do grafico
+          label: "Valor PC", // Titulo do grafico
+          data: [1500, 1000, 3100, 2900, 3050, 2950], // Dados do grafico
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",
@@ -39,14 +39,14 @@
             "rgba(255, 159, 64, 0.2)",
           ],
           borderColor: [
-            "rgba(255, 99, 132, 1)",
+            "rgba(42, 101, 189)",
             "rgba(54, 162, 235, 1)",
             "rgba(255, 206, 86, 1)",
             "rgba(75, 192, 192, 1)",
             "rgba(153, 102, 255, 1)",
             "rgba(255, 159, 64, 1)",
           ],
-          borderWidth: 1,
+          borderWidth: 2,
         },
       ],
     },
