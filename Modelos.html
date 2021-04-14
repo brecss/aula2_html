@@ -29,52 +29,32 @@
   </nav>
        
   </div>
-    <div style="width: 50%; height: 100px">
-      <canvas id="chart"></canvas>
+    <div style="width: 50%;">
+        <canvas id="chart_linha"></canvas>
     </div>
   </body>
 </html>
 <script>
-  // Cria o contexto do CANVAS
-  var ctx = chart.getContext("2d");
-
-  // Configuracao do grafico
-  var config = {
-    type: "line", // Aqui falo qual modelo de grafico vou querer
-    data: {
-      labels: ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN"], // Aqui são as legendas do grafico
-      datasets: [
-        {
-          label: "Valor PC", // Titulo do grafico
-          data: [1500, 1000, 3100, 2900, 3050, 2950], // Dados do grafico
-          backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(153, 102, 255, 0.2)",
-            "rgba(255, 159, 64, 0.2)",
-          ],
-          borderColor: [
-            "rgba(42, 101, 189)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)",
-          ],
-          borderWidth: 2,
+    var ctx = chart_linha.getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1°Mes', '2°Mes', '3°Mes', '4°Mes', '5°Mes', '6°Mes', '7°Mes'],
+            datasets: [{
+                label: 'Preço Arroz',
+                data: [15, 20, 26, 15, 23, 30, 22],
+                fill: true,
+                borderColor: '#8CC8FF',
+                backgroundColor: 'rgb(228, 243, 245, 0.5)',
+                tension: 0.1
+            }]
         },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true, // Especifico para o grafico comecar a partir do valor 0 no eixo Y
-        },
-      },
-    },
-  };
-
-  new Chart(ctx, config); // Aqui chamo a funcao Chart que foi inserida no meu projeto na linha 7
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
 </script>
